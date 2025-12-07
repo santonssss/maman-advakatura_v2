@@ -90,6 +90,7 @@ export default function LawyersPage() {
                   </Badge>
                 </div>
                 <div className="grid grid-cols-2 gap-4 w-full pt-4 border-t border-border">
+                  {/* Левый верх: активные дела */}
                   <div>
                     <p className="text-sm text-muted-foreground">
                       Активных дел
@@ -98,6 +99,8 @@ export default function LawyersPage() {
                       {lawyer.activeCases}
                     </p>
                   </div>
+
+                  {/* Правый верх: просрочено */}
                   <div>
                     <p className="text-sm text-muted-foreground">Просрочено</p>
                     <p
@@ -108,6 +111,14 @@ export default function LawyersPage() {
                       }`}
                     >
                       {lawyer.overdueCases}
+                    </p>
+                  </div>
+
+                  {/* Нижний центр: всего дел */}
+                  <div className="col-span-2 flex flex-col items-center">
+                    <p className="text-sm text-muted-foreground">Общих дел</p>
+                    <p className="text-2xl font-bold text-foreground">
+                      {lawyer.totalCases}
                     </p>
                   </div>
                 </div>
@@ -125,6 +136,9 @@ export default function LawyersPage() {
                 </TableHead>
                 <TableHead className="text-foreground font-semibold">
                   Статус
+                </TableHead>
+                <TableHead className="text-foreground font-semibold text-right">
+                  Всего дел
                 </TableHead>
                 <TableHead className="text-foreground font-semibold text-right">
                   Активных дел
@@ -159,6 +173,9 @@ export default function LawyersPage() {
                     <Badge {...getStatusBadge(lawyer.status)}>
                       {getStatusBadge(lawyer.status).label}
                     </Badge>
+                  </TableCell>
+                  <TableCell className="text-right text-muted-foreground">
+                    {lawyer.totalCases}
                   </TableCell>
                   <TableCell className="text-right text-foreground font-semibold">
                     {lawyer.activeCases}

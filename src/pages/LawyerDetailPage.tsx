@@ -15,6 +15,7 @@ import { lawyers, cases } from "@/data/mockData";
 import { ArrowLeft, Mail, Phone, Upload, ArrowUpDown } from "lucide-react";
 import { useState } from "react";
 import type { Case } from "@/types/lawyer";
+import { ButtonStatistics } from "@/components/lawyer/ButtonStatistics";
 
 const LawyerDetailPage = () => {
   const { id } = useParams();
@@ -178,6 +179,13 @@ const LawyerDetailPage = () => {
             <CardTitle>KPI и статистика</CardTitle>
           </CardHeader>
           <CardContent>
+            {" "}
+            <ButtonStatistics
+              lawyer={lawyer}
+              lawyerCases={lawyerCases}
+              allLawyers={lawyers}
+              allCases={cases}
+            />
             <div className="grid grid-cols-3 gap-4 mb-6">
               <div className="text-center p-4 border rounded-lg">
                 <p className="text-3xl font-bold text-primary">
@@ -198,7 +206,6 @@ const LawyerDetailPage = () => {
                 <p className="text-sm text-muted-foreground">Просрочено</p>
               </div>
             </div>
-
             <div>
               <h3 className="text-lg font-semibold mb-4">Дела адвоката</h3>
               <div className="border rounded-lg overflow-hidden">

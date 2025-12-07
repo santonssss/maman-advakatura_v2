@@ -1,4 +1,4 @@
-import { Scale, FileText, Settings } from "lucide-react";
+import { Scale, FileText, Settings, BarChart3 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import {
   Sidebar,
@@ -15,6 +15,7 @@ import {
 const menuItems = [
   { title: "Адвокаты", url: "/", icon: Scale },
   { title: "Реестр дел", url: "/cases", icon: FileText },
+  { title: "Аналитика", url: "/analytics", icon: BarChart3 },
   { title: "Настройки", url: "/settings", icon: Settings },
 ];
 

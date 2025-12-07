@@ -21,6 +21,9 @@ export const lawyers: Lawyer[] = [
       phone: "+7 (999) 123-45-67",
       email: "a.petrov@lawfirm.com",
     },
+    totalCases: 18,
+    totalRevenue: 13_500_000, // 13.5 млн ₽
+    winRate: 76,
   },
   {
     id: "2",
@@ -42,6 +45,9 @@ export const lawyers: Lawyer[] = [
       phone: "+7 (999) 234-56-78",
       email: "e.smirnova@lawfirm.com",
     },
+    totalCases: 18,
+    totalRevenue: 8_200_000, // 8.2 млн ₽
+    winRate: 81,
   },
   {
     id: "3",
@@ -63,6 +69,9 @@ export const lawyers: Lawyer[] = [
       phone: "+7 (999) 345-67-89",
       email: "m.ivanov@lawfirm.com",
     },
+    totalCases: 18,
+    totalRevenue: 6_800_000, // 6.8 млн ₽
+    winRate: 73,
   },
   {
     id: "4",
@@ -84,6 +93,9 @@ export const lawyers: Lawyer[] = [
       phone: "+7 (999) 456-78-90",
       email: "o.volkova@lawfirm.com",
     },
+    totalCases: 18,
+    totalRevenue: 16_400_000, // 16.4 млн ₽ (топ)
+    winRate: 84,
   },
   {
     id: "5",
@@ -105,6 +117,9 @@ export const lawyers: Lawyer[] = [
       phone: "+7 (999) 567-89-01",
       email: "d.kozlov@lawfirm.com",
     },
+    totalCases: 18,
+    totalRevenue: 4_100_000, // 4.1 млн ₽
+    winRate: 69,
   },
   {
     id: "6",
@@ -126,6 +141,9 @@ export const lawyers: Lawyer[] = [
       phone: "+7 (999) 678-90-12",
       email: "a.morozova@lawfirm.com",
     },
+    totalCases: 18,
+    totalRevenue: 11_300_000, // 11.3 млн ₽
+    winRate: 79,
   },
 ];
 
@@ -160,6 +178,8 @@ export const cases: Case[] = [
         files: ["protocol.pdf"],
       },
     ],
+    fee: 1_200_000,
+    isSuccessful: false,
   },
   {
     id: "c2",
@@ -185,6 +205,8 @@ export const cases: Case[] = [
         files: ["isk.pdf"],
       },
     ],
+    fee: 1_200_000,
+    isSuccessful: false,
   },
   {
     id: "c3",
@@ -203,6 +225,8 @@ export const cases: Case[] = [
     lastUpdate: new Date("2024-10-10"),
     description: "Спор о неисполнении договорных обязательств",
     entries: [],
+    fee: 1_200_000,
+    isSuccessful: false,
   },
   {
     id: "c4",
@@ -221,6 +245,8 @@ export const cases: Case[] = [
     lastUpdate: new Date("2024-11-05"),
     description: "Обжалование постановления административного органа",
     entries: [],
+    fee: 1_200_000,
+    isSuccessful: false,
   },
   {
     id: "c5",
@@ -246,6 +272,8 @@ export const cases: Case[] = [
         files: [],
       },
     ],
+    fee: 1_200_000,
+    isSuccessful: false,
   },
   {
     id: "c6",
@@ -264,6 +292,8 @@ export const cases: Case[] = [
     lastUpdate: new Date("2024-11-18"),
     description: "Раздел имущества",
     entries: [],
+    fee: 1_200_000,
+    isSuccessful: false,
   },
 ];
 

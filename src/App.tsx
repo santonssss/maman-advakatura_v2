@@ -9,6 +9,7 @@ import SettingsPage from "./pages/SettingsPage";
 import NotFound from "./pages/NotFound";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
+import AnalyticsPage from "./pages/AnalyticsPage";
 const App = () => (
   <TooltipProvider>
     <BrowserRouter>
@@ -18,6 +19,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/lawyer/:id" element={<LawyerDetailPage />} />
+          <Route path="/analytics" element={<AnalyticsPage />} />
           <Route path="/case/:id" element={<CaseDetailPage />} />
           <Route path="/cases" element={<CasesPage />} />
           <Route path="/settings" element={<SettingsPage />} />

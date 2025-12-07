@@ -16,6 +16,12 @@ export interface Lawyer {
     phone?: string;
     email?: string;
   };
+  totalCases: number;
+  totalRevenue?: number;
+  successfulCases?: number;
+  winRate?: number;
+  avgCaseDuration?: number;
+  clientSatisfaction?: number;
 }
 
 export interface CaseEntry {
@@ -42,4 +48,6 @@ export interface Case {
   lastUpdate: Date;
   description?: string;
   entries?: CaseEntry[];
+  fee?: number;
+  isSuccessful?: boolean;
 }
