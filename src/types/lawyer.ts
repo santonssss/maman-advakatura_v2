@@ -16,6 +16,7 @@ export interface Lawyer {
     phone?: string;
     email?: string;
   };
+  // Statistics
   totalCases: number;
   totalRevenue?: number;
   successfulCases?: number;
@@ -31,6 +32,9 @@ export interface CaseEntry {
   files?: string[];
 }
 
+export type PaymentStatus = "paid" | "unpaid" | "partial";
+export type CaseResult = "won" | "lost" | "partial_win" | "settled" | "pending";
+
 export interface Case {
   id: string;
   caseNumber: string;
@@ -42,12 +46,15 @@ export interface Case {
   orderNumber: string;
   orderDate: string;
   status: "active" | "overdue" | "completed" | "pending";
+  paymentStatus: PaymentStatus;
+  caseResult: CaseResult;
+  amount: number;
+  paidAmount: number;
   startDate: string;
   createdAt: Date;
   deadline: string;
   lastUpdate: Date;
   description?: string;
   entries?: CaseEntry[];
-  fee?: number;
-  isSuccessful?: boolean;
+  contractFile?: string;
 }
