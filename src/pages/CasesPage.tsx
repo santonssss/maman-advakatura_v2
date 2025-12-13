@@ -19,7 +19,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { cases, lawyers } from "@/data/mockData";
+import { cases } from "@/data/mockData";
 import type { Case, PaymentStatus, CaseResult } from "@/types/lawyer";
 import {
   ArrowUpDown,
@@ -375,9 +375,6 @@ export default function CasesPage() {
                   </TableRow>
                 ) : (
                   filteredAndSortedCases.map((caseItem) => {
-                    const lawyer = lawyers.find(
-                      (l) => l.id === caseItem.lawyerId
-                    );
                     return (
                       <TableRow
                         key={caseItem.id}

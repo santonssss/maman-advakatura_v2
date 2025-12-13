@@ -57,4 +57,6 @@ export interface Case {
   description?: string;
   entries?: CaseEntry[];
   contractFile?: string;
+  isSuccessful?: boolean;
+  fee?: number;
 }
